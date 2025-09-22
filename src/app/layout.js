@@ -20,7 +20,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+
+        <nav style={{ padding: '1rem', background: '#eee', color:"blue" }}>
+          <a href="/" style={{ marginRight: '1rem' }}>Home</a>
+          <a href="/about">About</a>
+        </nav>
+
+        <main>{children}</main>
+        
+        <footer 
+        style={{ padding: '1rem', background: '#f5f5f5', textAlign: 'center', color:'gray', marginTop: "35%" }}>
+          © 2025 My Next.js App. All rights reserved
+        </footer>
       </body>
     </html>
   );
